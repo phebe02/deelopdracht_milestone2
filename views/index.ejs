@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Porsche Overzicht</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/navbar') %>
+
+  <h1>Porsche Overzicht</h1>
+  <form method="GET" action="/">
+    <input type="text" name="filter" placeholder="Filter op naam" value="<%= filter || '' %>">
+    <button type="submit">Filter</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <% ['id', 'name', 'year', 'category', 'manufacturer.name'].forEach(field => { %>
+          <th>
+            <a href="/?sort=<%= field %>&order=<%= order === 'asc' ? 'desc' : 'asc' %>"><%= field %></a>
+          </th>
+        <% }) %>
+        <th>Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% porsches.forEach(p => { %>
+        <tr>
+          <td><%= p.id %></td>
+          <td><%= p.name %></td>
+          <td><%= p.year %></td>
+          <td><%= p.category %></td>
+          <td><a href="/manufacturer/<%= p.manufacturer.id %>"><%= p.manufacturer.name %></a></td>
+          <td><a href="/porsches/<%= p.id %>">Bekijk</a></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

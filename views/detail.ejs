@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= porsche.name %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/navbar') %>
+
+  <h1><%= porsche.name %> ( <%= porsche.id %> )</h1>
+  <img src="<%= porsche.imageUrl %>" alt="<%= porsche.name %>" style="max-width:300px;">
+  <ul>
+    <li><strong>Beschrijving:</strong> <%= porsche.description %></li>
+    <li><strong>PK:</strong> <%= porsche.horsepower %> hp</li>
+    <li><strong>Elektrisch:</strong> <%= porsche.isElectric ? 'Ja' : 'Nee' %></li>
+    <li><strong>Release datum:</strong> <%= porsche.releaseDate %></li>
+    <li><strong>Categorie:</strong> <%= porsche.category %></li>
+    <li><strong>Features:</strong> <%= porsche.features.join(', ') %></li>
+    <li><strong>Fabrikant:</strong>
+      <a href="/manufacturer/<%= porsche.manufacturer.id %>">
+        <%= porsche.manufacturer.name %>
+      </a>
+    </li>
+  </ul>
+</body>
+</html>

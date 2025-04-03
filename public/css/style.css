@@ -1,0 +1,120 @@
+
+/* Algemene layout */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #111;
+    color: #f4f4f4;
+}
+
+a {
+    color: #e50914;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+nav {
+    background-color: #000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #f4f4f4;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Tabellen */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px #000;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: #222;
+    color: #e50914;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+tr:hover {
+    background-color: #333;
+}
+
+/* Buttons */
+button, .btn {
+    padding: 0.5rem 1.2rem;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #ff1f2c;
+}
+
+/* Filters en inputs */
+input[type="text"], select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-color: #1c1c1c;
+    color: #fff;
+    margin: 0.5rem 0;
+}
+
+/* Detailpagina */
+.detail-card {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
+    margin-top: 2rem;
+}
+
+.detail-card h2 {
+    color: #e50914;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #000;
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9rem;
+}
